@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+          <meta charset="utf-8">
+        <title>COVID DASHBOARD</title>
+        <link rel="stylesheet"  type="text/css" href= "{{ url_for('static',filename='styles/layout.css') }}">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <!-- Plotly.js -->
+        <script src="https://d14fo0winaifog.cloudfront.net/plotly-basic.js"></script>
+
+        <script type="text/javascript">
+        <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+    </head>
+    <body>
+        <main class="main">
+        <div class="main-header">
+          <div class="main-header__heading">CURRENT COVID CASES</div>
+          <div class="main-header__updates">Recent Items</div>
+        </div>
+
+        <div class="main-overview">
+          <div class="overviewcard">
+            <div class="overviewcard__info"><p><strong>Confirmed Cases</strong><br>439382</p></div>
+          </div>
+          <div class="overviewcard">
+            <div class="overviewcard__info"><p><strong>Death Cases</strong><br>439382</p></div>
+          </div>
+          <div class="overviewcard">
+            <div class="overviewcard__info"><p><strong>Recovered Cases</strong><br>439382</p></div>
+          </div>
+          <div class="overviewcard">
+            <div class="overviewcard__info"><p><strong>Active Cases</strong><br>439382</p></div>
+          </div>
+        </div>
+
+        <div class="main-cards">
+          <div class="card"><img id='image' style="max-width:100%; max-height:100%;" src="{{ url_for('static', filename='Population_NL.png') }}" alt="India-density"/></div>
+          <div class="card"><img id='image_graph' style="max-width:100%; max-height:100%;"  src="{{ graphJSON }}"  alt="graph" /></div>
+          <div class="card">
+            <p> Let us know what is your preferred</p>
+
+    <select id="myselection">
+    	<option>Select Option</option>
+    	<option value="One"/>Graph1</option>
+    	<option value="Two"/>Graph2</option>
+    	<option value="Three"/>Graph3</option>
+    </select>
+
+  <div id="showOne" class="myDiv">
+  	<img  id='image_new' style="max-width:100%; max-height:100%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd4l9mhjsOAPkR2nw2j8TsqGEi7z9i5W_wcucdb5JCKN04rc6Y&s" alt="pic1">
+  </div>
+  <div id="showTwo" class="myDiv">
+	<img  id='image_new' style="max-width:100%; max-height:100%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd4l9mhjsOAPkR2nw2j8TsqGEi7z9i5W_wcucdb5JCKN04rc6Y&s" alt="pic1">
+  </div>
+  <div id="showThree" class="myDiv">
+  	<img  id='image_new' style="max-width:100%; max-height:100%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd4l9mhjsOAPkR2nw2j8TsqGEi7z9i5W_wcucdb5JCKN04rc6Y&s" alt="pic1">
+  </div>
+      </div>
+    </main>
+
+  <footer class="footer">
+    <div class="footer__signature">Made with love</div>
+  </footer>
+
+  </body>
+  </html>
